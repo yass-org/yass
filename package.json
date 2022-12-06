@@ -1,0 +1,30 @@
+{
+  "name": "yass",
+  "version": "0.0.1",
+  "description": "Monorepo for Yass CSS suite",
+  "scripts": {
+    "build": "./scripts/build.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yass-org/yass.git"
+  },
+  "keywords": [
+    "Design",
+    "Tokens",
+    "Design Tokens",
+    "Design System",
+    "Yass",
+    "CSS",
+    "Atomic CSS"
+  ],
+  "author": "Yass Org",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yass-org/yass/issues"
+  },
+  "homepage": "https://github.com/yass-org/yass#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1"
+  }
+}

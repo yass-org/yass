@@ -1,0 +1,40 @@
+{
+  "name": "yass-default-tokens",
+  "version": "0.0.1",
+  "description": "Sensible defaults for Yass CSS",
+  "main": "build/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yass-org/yass-default-tokens.git"
+  },
+  "keywords": [
+    "Design",
+    "Tokens",
+    "Design Tokens",
+    "Design System",
+    "Yass",
+    "CSS",
+    "Atomic CSS"
+  ],
+  "author": "Yass Org",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yass-org/yass-default-tokens/issues"
+  },
+  "homepage": "https://github.com/yass-org/yass-default-tokens#readme",
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "@types/jest": "^29.2.4",
+    "@types/node": "^18.11.11",
+    "babel-jest": "^29.3.1",
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1",
+    "jsdom": "^20.0.3",
+    "ts-jest": "^29.0.3",
+    "typescript": "^4.9.3"
+  }
+}
