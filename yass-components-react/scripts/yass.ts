@@ -6,6 +6,7 @@ import type { YassConfig } from 'yass-css';
 const config: YassConfig = {
   stylesheetOutDir: './yass-components-react/public/styles',
   typesOutDir: './yass-components-react/types',
+  typesFileName: 'yass.json',
 }
 
 build(config)
