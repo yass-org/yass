@@ -1,0 +1,26 @@
+[
+  {
+    "name": "light",
+    "value": "200",
+    "properties": ["font-weight"]
+  },
+  {
+    "name": "normal",
+    "value": "400",
+    "properties": ["font-weight"]
+  },
+  {
+    "name": "heavy",
+    "value": "700",
+    "properties": ["font-weight"]
+  },
+  {
+    "name": "text",
+    "value": "hsl(220, 25%, 20%)",
+    "theme": {
+      "light": "hsl(220, 25%, 20%)",
+      "dark": "hsl(220, 25%, 85%)"
+    },
+    "properties": ["color"]
+  }
+]

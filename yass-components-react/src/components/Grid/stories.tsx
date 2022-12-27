@@ -1,7 +1,5 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import * as classNames from "../../../types/yass.json";
-
 import Grid from "./index";
 import Box from "../Box";
 
@@ -12,22 +10,10 @@ export default {
     children: {
       control: "text",
     },
-    gridTemplateColumns: {
-      control: { type: "select" },
-      options: classNames["grid-template-columns"],
-    },
-    gap: {
-      control: { type: "select" },
-      options: classNames["gap"],
-    },
-    rowGap: {
-      control: { type: "select" },
-      options: classNames["row-gap"],
-    },
-    columnGap: {
-      control: { type: "select" },
-      options: classNames["column-gap"],
-    },
+    gridTemplateColumns: { control: { type: "text" } },
+    gap: { control: { type: "text" } },
+    rowGap: { control: { type: "text" } },
+    columnGap: { control: { type: "text" } },
   },
 } as ComponentMeta<typeof Grid>;
 

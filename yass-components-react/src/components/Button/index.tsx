@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Size, Variant } from "../../shared";
+
 export const tags = ["button", "a"];
 
 const baseStyles = `

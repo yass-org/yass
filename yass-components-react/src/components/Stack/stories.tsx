@@ -1,11 +1,10 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import * as classNames from "../../../types/yass.json";
-
 import Box from "../Box";
 import Inline from "../Inline";
 import Stack from "./index";
 import Text from "../Text";
+import { scale } from "../../shared/constants";
 
 export default {
   title: "Stack",
@@ -14,27 +13,18 @@ export default {
     children: {
       control: "text",
     },
-    gap: {
-      control: { type: "select" },
-      options: classNames["gap"],
-    },
-    justifyContent: {
-      control: { type: "select" },
-      options: classNames["justify-content"],
-    },
-    alignItems: {
-      control: { type: "select" },
-      options: classNames["align-items"],
-    },
+    gap: { control: { type: "text" } },
+    justifyContent: { control: { type: "text" } },
+    alignItems: { control: { type: "text" } },
   },
 } as ComponentMeta<typeof Stack>;
 
 export const Gap: ComponentStory<typeof Stack> = (args) => (
   <Inline alignItems="align-items:flex-start" gap="gap:5">
-    {classNames["gap"].map((gap: string) => (
+    {scale.map((gap) => (
       <>
-        <Text>{gap}</Text>
-        <Stack gap={gap}>
+        <Text>{`gap:${gap}`}</Text>
+        <Stack gap={`gap:${gap}`}>
           <Box
             padding="padding:20"
             backgroundColor="background-color:purple-400"

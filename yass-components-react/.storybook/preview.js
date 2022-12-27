@@ -1,4 +1,4 @@
-import '../public/styles/styles.css'
+import '../public/styles/yass.css'
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

@@ -1,12 +1,12 @@
 import { ReactNode } from "react";
 
-import * as classNames from "../../../types/yass.json";
+import type { Gap, AlignItems, JustifyContent } from "../../types/yass";
 
 export interface InlineProps {
-  gap?: typeof classNames["gap"][number];
+  gap?: Gap;
   id?: string;
-  alignItems?: typeof classNames["align-items"][number];
-  justifyContent?: typeof classNames["justify-content"][number];
+  alignItems?: AlignItems;
+  justifyContent?: JustifyContent;
   testId?: string;
   children?: ReactNode;
 }

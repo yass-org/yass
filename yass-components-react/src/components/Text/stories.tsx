@@ -1,31 +1,21 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import * as classNames from "../../../types/yass.json";
-
 import Text, { tags } from "./index";
 import Stack from "../Stack";
+import { fontWeight, scale } from "../../shared/constants";
 
 export default {
   title: "Text",
   component: Text,
   argTypes: {
     children: { control: "text" },
-    color: {
-      options: classNames["color"],
-      control: { type: "select" },
-    },
+    color: { control: { type: "select" } },
     as: {
       options: tags,
       control: { type: "select" },
     },
-    fontWeight: {
-      options: classNames["font-weight"],
-      control: { type: "select" },
-    },
-    fontSize: {
-      options: classNames["font-size"],
-      control: { type: "select" },
-    },
+    fontWeight: { control: { type: "select" } },
+    fontSize: { control: { type: "select" } },
   },
 } as ComponentMeta<typeof Text>;
 
@@ -40,18 +30,20 @@ Default.args = {
   children: "This is some text content",
 };
 
-export const FontWeight: ComponentStory<typeof Text> = (args) => (
+export const FontWeight: ComponentStory<typeof Text> = (_args) => (
   <Stack gap="gap:5">
-    {classNames["font-weight"].map((fontWeight: string) => (
-      <Text fontWeight={fontWeight}>{fontWeight}</Text>
+    {fontWeight.map((weight) => (
+      <Text
+        fontWeight={`font-weight:${weight}`}
+      >{`font-weight:${weight}`}</Text>
     ))}
   </Stack>
 );
 
-export const FontSize: ComponentStory<typeof Text> = (args) => (
+export const FontSize: ComponentStory<typeof Text> = (_args) => (
   <Stack gap="gap:5">
-    {classNames["font-size"].map((fontSize: string) => (
-      <Text fontSize={fontSize}>{fontSize}</Text>
+    {scale.map((fontSize) => (
+      <Text fontSize={`font-size:${fontSize}`}>{`font-size:${fontSize}`}</Text>
     ))}
   </Stack>
 );
