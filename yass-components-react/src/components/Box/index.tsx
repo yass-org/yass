@@ -41,7 +41,7 @@ export interface BoxProps {
 const Box = ({
   id,
   testId,
-  as: Component = "div",
+  as = "div",
   padding,
   paddingBlock,
   paddingInline,
@@ -56,8 +56,10 @@ const Box = ({
   zIndex,
   children,
 }: BoxProps) => {
+  const Component = as;
+
   return (
-    // @ts-ignore
+    // @ts-ignore TODO: figure out why
     <Component
       id={id}
       data-testid={testId}
