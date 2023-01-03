@@ -1,16 +1,22 @@
 import { ReactNode } from "react";
 
-import * as classNames from "../../../types/yass.json";
+import type {
+  GridTemplateColumns,
+  Gap,
+  ColumnGap,
+  RowGap,
+  JustifyContent,
+} from "../../types/yass";
 
 export interface GridProps {
   id?: string;
   testId?: string;
   children?: ReactNode;
-  gridTemplateColumns: typeof classNames["grid-template-columns"][number];
-  gap?: typeof classNames["gap"][number];
-  columnGap?: typeof classNames["column-gap"][number];
-  rowGap?: typeof classNames["row-gap"][number];
-  justifyContent?: typeof classNames["justify-content"][number];
+  gridTemplateColumns: GridTemplateColumns;
+  gap?: Gap;
+  columnGap?: ColumnGap;
+  rowGap?: RowGap;
+  justifyContent?: JustifyContent;
 }
 
 const Grid = ({

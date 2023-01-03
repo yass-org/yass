@@ -1,0 +1,12 @@
+{
+  "stylesheet": {
+    "includeBaseClasses": true,
+    "buildPath": "public/styles/",
+    "filename": "yass.css"
+  },
+  "types": {
+    "includeTypes": true,
+    "buildPath": "src/types/",
+    "filename": "yass.ts"
+  }
+}

@@ -1,0 +1,17 @@
+[
+  {
+    "name": "two-column-layout",
+    "value": "repeat(2, 1fr)",
+    "properties": ["grid-template-columns"]
+  },
+  {
+    "name": "three-column-layout",
+    "value": "repeat(3, 1fr)",
+    "properties": ["grid-template-columns"]
+  },
+  {
+    "name": "page-layout",
+    "value": "2fr 8fr 2fr",
+    "properties": ["grid-template-columns"]
+  }
+]

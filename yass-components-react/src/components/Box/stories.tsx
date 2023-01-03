@@ -1,6 +1,11 @@
 import { ComponentStory, ComponentMeta } from "@storybook/react";
 
-import * as classNames from "../../../types/yass.json";
+import {
+  colorNames,
+  colorValues,
+  opacity,
+  scale,
+} from "../../shared/constants";
 
 import Box, { tags } from "./index";
 import Inline from "../Inline";
@@ -19,58 +24,19 @@ export default {
       options: tags,
       control: { type: "select" },
     },
-    position: {
-      control: { type: "select" },
-      options: classNames["position"],
-    },
-    padding: {
-      control: { type: "select" },
-      options: classNames["padding"],
-    },
-    paddingBlock: {
-      control: { type: "select" },
-      options: classNames["padding-block"],
-    },
-    paddingInline: {
-      control: { type: "select" },
-      options: classNames["padding-inline"],
-    },
-    backgroundColor: {
-      control: { type: "select" },
-      options: classNames["background-color"],
-    },
-    borderWidth: {
-      control: { type: "select" },
-      options: classNames["border-width"],
-    },
-    borderColor: {
-      control: { type: "select" },
-      options: classNames["border-color"],
-    },
-    borderStyle: {
-      control: { type: "select" },
-      options: classNames["border-style"],
-    },
-    borderRadius: {
-      control: { type: "select" },
-      options: classNames["border-radius"],
-    },
-    overflow: {
-      control: { type: "select" },
-      options: classNames["overflow"],
-    },
-    opacity: {
-      control: { type: "select" },
-      options: classNames["opacity"],
-    },
-    zIndex: {
-      control: { type: "select" },
-      options: classNames["z-index"],
-    },
-    textColor: {
-      control: { type: "select" },
-      options: classNames["color"],
-    },
+    position: { control: { type: "select" } },
+    padding: { control: { type: "select" } },
+    paddingBlock: { control: { type: "select" } },
+    paddingInline: { control: { type: "select" } },
+    backgroundColor: { control: { type: "select" } },
+    borderWidth: { control: { type: "select" } },
+    borderColor: { control: { type: "select" } },
+    borderStyle: { control: { type: "select" } },
+    borderRadius: { control: { type: "select" } },
+    overflow: { control: { type: "select" } },
+    opacity: { control: { type: "select" } },
+    zIndex: { control: { type: "select" } },
+    textColor: { control: { type: "select" } },
   },
 } as ComponentMeta<typeof Box>;
 
@@ -108,8 +74,8 @@ const DefaultTemplate: ComponentStory<typeof Box> = ({
 export const Default = DefaultTemplate.bind({});
 Default.args = {
   children: "Some content in a box",
-  paddingBlock: "padding:10",
-  paddingInline: "padding:5",
+  paddingBlock: "padding-block:10",
+  paddingInline: "padding-inline:5",
   borderColor: "border-color:blue-400",
   backgroundColor: "background-color:blue-200",
   borderStyle: "border-style:solid",
@@ -120,36 +86,13 @@ Default.args = {
   zIndex: "z-index:100",
 };
 
-const colors = [
-  "neutral",
-  "red",
-  "orange",
-  "yellow",
-  "green",
-  "teal",
-  "blue",
-  "purple",
-  "pink",
-];
-const values = [
-  "50",
-  "100",
-  "200",
-  "300",
-  "400",
-  "500",
-  "600",
-  "700",
-  "800",
-  "900",
-];
-
-export const Colors: ComponentStory<typeof Box> = () => (
+export const Colors: ComponentStory<typeof Box> = (_args) => (
   <Stack gap="gap:2">
-    {colors.map((color: string) => (
+    {colorNames.map((color) => (
       <Inline gap="gap:2">
-        {values.map((value: string) => (
+        {colorValues.map((value) => (
           <Box
+            display="display:flex"
             padding="padding:20"
             backgroundColor={`background-color:${color}-${value}`}
           ></Box>
@@ -159,34 +102,34 @@ export const Colors: ComponentStory<typeof Box> = () => (
   </Stack>
 );
 
-export const Opacity: ComponentStory<typeof Box> = () => (
+export const Opacity: ComponentStory<typeof Box> = (_args) => (
   <Inline gap="gap:10">
-    {classNames["opacity"].map((value: string) => (
+    {opacity.map((value) => (
       <Stack alignItems="align-items:center">
         <Text>{value}</Text>
 
         <Box
           backgroundColor="background-color:neutral-900"
           padding="padding:30"
-          opacity={value}
+          opacity={`opacity:${value}`}
         ></Box>
       </Stack>
     ))}
   </Inline>
 );
 
-export const BorderRadius: ComponentStory<typeof Box> = () => (
+export const BorderRadius: ComponentStory<typeof Box> = (_args) => (
   <Grid
     gap="gap:5"
     justifyContent="justify-content:center"
     gridTemplateColumns="grid-template-columns:three-column-layout"
   >
-    {classNames["border-radius"].map((value: string) => (
+    {scale.map((value) => (
       <Box display="display:flex">
         <Box
           backgroundColor="background-color:green-600"
           padding="padding:30"
-          borderRadius={value}
+          borderRadius={`border-radius:${value}`}
         >
           {value}
         </Box>

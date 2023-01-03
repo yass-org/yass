@@ -1,6 +1,20 @@
 import { ReactNode } from "react";
 
-import * as classNames from "../../../types/yass.json";
+import type {
+  Display,
+  Position,
+  Padding,
+  PaddingBlock,
+  PaddingInline,
+  BackgroundColor,
+  BorderWidth,
+  BorderColor,
+  BorderStyle,
+  BorderRadius,
+  Overflow,
+  Opacity,
+  ZIndex,
+} from "../../types/yass";
 
 export const tags = ["div", "span"];
 
@@ -9,19 +23,19 @@ export interface BoxProps {
   testId?: string;
   children?: ReactNode;
   as?: typeof tags[number];
-  display?: typeof classNames["display"][number];
-  position?: typeof classNames["position"][number];
-  padding?: typeof classNames["padding"][number];
-  paddingBlock?: typeof classNames["padding-block"][number];
-  paddingInline?: typeof classNames["padding-inline"][number];
-  backgroundColor?: typeof classNames["background-color"][number];
-  borderWidth?: typeof classNames["border-width"][number];
-  borderColor?: typeof classNames["border-color"][number];
-  borderStyle?: typeof classNames["border-style"][number];
-  borderRadius?: typeof classNames["border-radius"][number];
-  overflow?: typeof classNames["overflow"][number];
-  opacity?: typeof classNames["opacity"][number];
-  zIndex?: typeof classNames["z-index"][number];
+  display?: Display;
+  position?: Position;
+  padding?: Padding;
+  paddingBlock?: PaddingBlock;
+  paddingInline?: PaddingInline;
+  backgroundColor?: BackgroundColor;
+  borderWidth?: BorderWidth;
+  borderColor?: BorderColor;
+  borderStyle?: BorderStyle;
+  borderRadius?: BorderRadius;
+  overflow?: Overflow;
+  opacity?: Opacity;
+  zIndex?: ZIndex;
 }
 
 const Box = ({

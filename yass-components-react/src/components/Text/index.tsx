@@ -1,18 +1,25 @@
 import { ReactNode } from "react";
 
-import * as classNames from "../../../types/yass.json";
+import type {
+  Color,
+  FontWeight,
+  FontSize,
+  TextDecoration,
+  TextAlign,
+  VerticalAlign,
+} from "../../types/yass";
 
 export const tags = ["p", "span", "div", "strong"];
 
 export interface TextProps {
   as?: typeof tags[number];
   id?: string;
-  color?: typeof classNames["color"][number];
-  fontWeight?: typeof classNames["font-weight"][number];
-  fontSize?: typeof classNames["font-size"][number];
-  textDecoration?: typeof classNames["text-decoration"][number];
-  textAlign?: typeof classNames["text-align"][number];
-  verticalAlign?: typeof classNames["vertical-align"][number];
+  color?: Color;
+  fontWeight?: FontWeight;
+  fontSize?: FontSize;
+  textDecoration?: TextDecoration;
+  textAlign?: TextAlign;
+  verticalAlign?: VerticalAlign;
   testId?: string;
   children?: ReactNode;
 }

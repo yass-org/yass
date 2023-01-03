@@ -1,17 +1,29 @@
-export interface TokenDefinitions {
-  tokens: object; // TODO: Better types
-  properties: string[];
+export interface Config {
+  includeBaseClasses: boolean;
+  stylesheet?: {
+    buildPath?: string;
+    filename?: string;
+  },
+  types?: {
+    buildPath?: string;
+    filename?: string;
+  },
 }
 
-export interface UtilityClassDefinition {
+type Value = string;
+
+export interface Theme {
+  [theme: string]: Value;
+}
+
+export interface YassToken {
   name: string;
-  declarations: {
-    property: string;
-    value: string;
-  }[];
+  value: Value;
+  theme?: Theme;
+  properties?: string[];
+  // comment?: string; // TODO
 }
 
-export interface BaseCSSDeclarations {
-  property: string;
-  values: string[];
+export interface DesignToken extends YassToken {
+  category?: 'color' | 'elevation' | 'motion' | 'font-weight' | 'opacity' | 'scale';
 }
