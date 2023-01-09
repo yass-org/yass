@@ -1,5 +1,6 @@
 export interface Config {
   includeBaseClasses: boolean;
+  pseudoClasses: string[]; // TODO: Think more about value of stricter typing here
   stylesheet?: {
     buildPath?: string;
     filename?: string;

@@ -14,6 +14,7 @@ const tokens_1 = require("./tokens");
 const userConfig = require(`${process.cwd()}/yass.config.json`); // Open user config JSON
 const config = {
     includeBaseClasses: userConfig.includeBaseClasses !== undefined ? userConfig.includeBaseClasses : true,
+    pseudoClasses: userConfig.pseudoClasses || ['hover', 'focus', 'active', 'visited'],
     stylesheet: {
         buildPath: ((_a = userConfig.stylesheet) === null || _a === void 0 ? void 0 : _a.buildPath) || 'styles/yass/',
         filename: ((_b = userConfig.stylesheet) === null || _b === void 0 ? void 0 : _b.filename) || 'yass.css',
@@ -35,7 +36,7 @@ else {
     tokens = tokens_1.defaults;
 }
 // Build stylesheet from tokens
-const stylesheet = (0, build_1.build)(tokens, config.includeBaseClasses ? tokens_1.css : []);
+const stylesheet = (0, build_1.build)(tokens, config.includeBaseClasses ? tokens_1.css : [], config.pseudoClasses);
 const { buildPath, filename } = config.stylesheet;
 (0, write_file_1.default)(buildPath, filename, stylesheet);
 const types = (0, build_types_1.buildTypes)(tokens, config.includeBaseClasses ? tokens_1.css : []);

@@ -14,6 +14,7 @@ import type { Config } from './types'
 const userConfig: Partial<Config> = require(`${process.cwd()}/yass.config.json`) // Open user config JSON
 const config: Config = {
   includeBaseClasses: userConfig.includeBaseClasses !== undefined ? userConfig.includeBaseClasses : true,
+  pseudoClasses: userConfig.pseudoClasses || ['hover', 'focus', 'active', 'visited'],
   stylesheet: {
     buildPath: userConfig.stylesheet?.buildPath || 'styles/yass/',
     filename: userConfig.stylesheet?.filename || 'yass.css',
@@ -35,11 +36,11 @@ if(tokensDir) {
 } else {
   tokens = defaultTokens
 }
-
 // Build stylesheet from tokens
 const stylesheet = build(
   tokens, 
   config.includeBaseClasses ? cssTokens : [],
+  config.pseudoClasses,
 )
 const { buildPath, filename } = config.stylesheet
 
