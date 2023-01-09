@@ -1,7 +1,5 @@
-import { ReactNode } from "react";
+import React, { MouseEventHandler, ReactNode, SyntheticEvent } from "react";
 import { Size, Variant } from "../../shared";
-
-export const tags = ["button", "a"];
 
 const baseStyles = `
   border-radius:3
@@ -35,31 +33,29 @@ const variants = (variant: Variant) => {
 export interface ButtonProps {
   id?: string;
   testId?: string;
-  as?: typeof tags[number];
   variant?: Variant;
   size?: Size;
   children?: ReactNode;
+  onClick?: (event: any) => void; // TODO: Better types
 }
 
 const Button = ({
   children,
   id,
   testId,
-  as = "button",
+  onClick = () => {},
   variant = "primary",
   size = "medium",
 }: ButtonProps) => {
-  const Component = as;
-
   return (
-    // @ts-ignore TODO: figure out why
-    <Component
+    <button
       id={id}
+      onClick={onClick}
       data-testid={testId}
       className={[baseStyles, variants(variant), sizes(size)].join(" ")}
     >
       {children}
-    </Component>
+    </button>
   );
 };
 
