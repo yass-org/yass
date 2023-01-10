@@ -1,0 +1,199 @@
+[
+  {
+    "name": "button-small",
+    "value": "{scale-5}",
+    "properties": ["padding-inline"]
+  },
+  {
+    "name": "button-small",
+    "value": "{scale-2}",
+    "properties": ["padding-block"]
+  },
+  {
+    "name": "button-small",
+    "value": "{scale-8}",
+    "properties": ["font-size"]
+  },
+  {
+    "name": "button-medium",
+    "value": "{scale-8}",
+    "properties": ["padding-inline"]
+  },
+  {
+    "name": "button-medium",
+    "value": "{scale-5}",
+    "properties": ["padding-block"]
+  },
+  {
+    "name": "button-medium",
+    "value": "{scale-8}",
+    "properties": ["font-size"]
+  },
+  {
+    "name": "button-large",
+    "value": "{scale-20}",
+    "properties": ["padding-inline"]
+  },
+  {
+    "name": "button-large",
+    "value": "{scale-10}",
+    "properties": ["padding-block"]
+  },
+  {
+    "name": "button-large",
+    "value": "{scale-10}",
+    "properties": ["font-size"]
+  },
+  {
+    "name": "primary",
+    "value": "{color-blue-500}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "subtle",
+    "value": "{color-neutral-100}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "neutral",
+    "value": "{color-neutral-500}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "success",
+    "value": "{color-green-500}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "warning",
+    "value": "{color-yellow-500}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "danger",
+    "value": "{color-red-500}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "primary-hover",
+    "value": "{color-blue-400}",
+    "properties": ["background-color"]
+  },  
+  {
+    "name": "subtle-hover",
+    "value": "{color-neutral-50}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "neutral-hover",
+    "value": "{color-neutral-400}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "success-hover",
+    "value": "{color-green-400}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "warning-hover",
+    "value": "{color-yellow-400}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "danger-hover",
+    "value": "{color-red-400}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "primary-active",
+    "value": "{color-blue-600}",
+    "properties": ["background-color"]
+  },  
+  {
+    "name": "subtle-active",
+    "value": "{color-neutral-200}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "neutral-active",
+    "value": "{color-neutral-600}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "success-active",
+    "value": "{color-green-600}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "warning-active",
+    "value": "{color-yellow-600}",
+    "properties": ["background-color"]
+  },
+  {
+    "name": "danger-active",
+    "value": "{color-red-600}",
+    "properties": ["background-color"]
+  },
+
+  {
+    "name": "primary",
+    "value": "{color-neutral-100}",
+    "properties": ["color"]
+  },
+  {
+    "name": "subtle",
+    "value": "{color-neutral-900}",
+    "properties": ["color"]
+  },
+  {
+    "name": "neutral",
+    "value": "{color-neutral-100}",
+    "properties": ["color"]
+  },
+  {
+    "name": "success",
+    "value": "{color-green-100}",
+    "properties": ["color"]
+  },
+  {
+    "name": "warning",
+    "value": "{color-yellow-900}",
+    "properties": ["color"]
+  },
+  {
+    "name": "danger",
+    "value": "{color-red-100}",
+    "properties": ["color"]
+  },
+
+{
+    "name": "primary",
+    "value": "{color-blue-500}",
+    "properties": ["border-color"]
+  },
+  {
+    "name": "subtle",
+    "value": "{color-neutral-500}",
+    "properties": ["border-color"]
+  },
+  {
+    "name": "neutral",
+    "value": "{color-neutral-500}",
+    "properties": ["border-color"]
+  },
+  {
+    "name": "success",
+    "value": "{color-green-500}",
+    "properties": ["border-color"]
+  },
+  {
+    "name": "warning",
+    "value": "{color-yellow-500}",
+    "properties": ["border-color"]
+  },
+  {
+    "name": "danger",
+    "value": "{color-red-500}",
+    "properties": ["border-color"]
+  }  
+]
